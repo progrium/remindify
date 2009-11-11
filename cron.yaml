@@ -1,0 +1,4 @@
+cron:
+- description: check for reminders
+  url: /check
+  schedule: every 1 minutes

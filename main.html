@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Remindify: Quick reminder scheduler</title>
+    <link href="/static/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="wrapper">
+    <h1><img src="/favicon.ico" width="60" height="60" style="margin-bottom: -12px;" /> Remindify</h1>
+    {% if user %}
+    
+    <form action="/" method="post">
+    <div style="float: right; margin-top: -30px;">{{ user.nickname }} | <select name="tz">
+      <option>PST</option>
+      <option selected="selected">PDT</option>
+      <option>MST</option>
+      <option>MDT</option>
+      <option>CST</option>
+      <option>CDT</option>
+      <option>EST</option>
+      <option>EDT</option>
+      </select> | <a href="{{ logout_url }}">Logout</a></div>
+    
+    <p>
+      
+        <small style="color: #222;">Reminder:</small><br />
+        <input type="text" name="raw" style="font-size: 24px; width: 100%;"/> 
+        <small style="color: #888; font-size: 12px;">Examples: "move car in 2 hours" or "go home at 5pm"</small>
+        <input type="submit" value="Schedule" style="float: right; margin-top: 4px;"/>
+    </p>
+    </form>
+    
+    {% if reminders %}
+    <p>
+      <ul>
+        {% for reminder in reminders %}
+        <li>{{ reminder.text }} <small style="color: #888; font-size: 12px;">{{ reminder.scheduled|timeuntil }}</small>
+          <form style="display:inline;" action="/" method="post">
+            <input type="hidden" name="id" value="{{ reminder.key.id }}" />
+            <input type="submit" value="Delete" /></form></li>
+        {% endfor %}
+      </ul>
+    </p>
+    {% endif %}
+    
+    {% else %}
+    
+    <p>Remindify lets you quickly schedule reminders using your <a href="http://notify.io">notify.io</a> account using a common natural language format, like "move car in 2 hours" or "get some sleep at 4am".</p>
+    
+    <p><a id="login-button" href="{{ login_url }}">Login with Google</a></p>
+    
+    
+    {% endif %}
+    </div>
+    
+  </body>
+</html>

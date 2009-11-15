@@ -1,4 +1,197 @@
-body { font-family: Georgia; }
-h1 { font-size: 50px; letter-spacing: 6}
-#wrapper { width: 525px; margin-left: auto; margin-right: auto; }
-#login-button { font-size: 20px; margin-left: 150px; }
+body {
+	
+	color: #4f4742;
+	font-family: georgia;
+	font-size: 18px;
+	line-height:47px;
+	padding:0;
+	margin:0;
+}
+
+#content {
+	margin: 0 auto;
+	width: 600px;
+	background: transparent url(/static/background.jpg)  center 24px repeat-y;
+}
+
+a {
+	color: #4a9ed6;
+	border-bottom: transparent solid 1px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #75b17d;
+	border-bottom: #75b17d solid 1px;
+}
+
+a.login {
+	background: transparent url(/static/login.png) top center;
+	border:0;
+	cursor: pointer;
+	display: block;
+	height: 112px;
+	margin:50px auto 0;
+	text-align: center;
+	text-indent: -9999px;
+	width: 410px;
+}
+
+a.login:hover {
+	background: transparent url(/static/login_hover.png) top center;	
+}
+
+a.delete {
+	margin-left:5px;
+	background: transparent url(/static/delete.gif) top center;
+	height: 17px;
+	width: 68px;
+	text-indent: -9999px;
+	display: block;
+}
+
+a.delete:hover {
+	background: transparent url(/static/delete_hover.gif) top center;
+	height: 17px;
+	width: 68px;
+	border:none;
+}
+
+#footer {
+	background: transparent url(/static/footer.jpg) bottom center;	
+	width:600px;
+	height:228px;	
+	margin-top: -15px;
+}
+
+h1 {
+	background: transparent url(/static/remindify.jpg) top center;
+	height:220px;
+	margin:0;
+	padding:0;
+	width:600px;
+	text-indent: -9999px;
+}
+
+
+h2 {
+	clear:both;
+	font-size:14px;
+	font-weight:normal;
+	letter-spacing:6px;
+	line-height:40px;
+	margin:51px auto 0;
+	text-transform:uppercase;
+	width:530px;
+}
+
+h3 {
+	clear:both;
+	font-size:14px;
+	font-weight:normal;
+	letter-spacing:6px;
+	line-height:40px;
+	margin:28px auto 0;
+	text-transform:uppercase;
+	width:530px;
+}
+
+#homepage_body {
+	background: transparent url(/static/homepage_body.jpg) top center;	
+	width:600px;
+	height:571px;
+}
+
+#list_body {
+	background: transparent url(/static/list_body.jpg) top center no-repeat;	
+	width:600px;
+}
+
+#homepage_body p {
+	font-family: 'american typewriter','clarendon regular', 'claredon',georgia;
+	margin:0 auto;
+	position: relative;
+	top:55px;
+	width: 510px;
+}
+
+#homepage_body  p span {
+	color: #907649;
+}
+
+form {
+	width: 530px;
+	margin: 0 auto;
+}
+
+input.reminder {
+	float: left;
+	font-size:18px;
+	font-family: 'american typewriter','clarendon regular', 'claredon',georgia;
+	padding:3px;
+	width:400px;
+	color: #4f4742;
+	margin-right:10px;
+}
+
+input.submit {
+	background: transparent url(/static/schedule.gif) top center no-repeat;
+	border:none;
+	float:left;
+	height: 32px;
+	width:115px;
+}
+
+#nav {
+	margin: 0 auto;
+	position: relative;
+	top:27px;
+	width:530px;
+}
+
+
+#nav p {
+	font-size:11px;
+	line-height: 11px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	float: left;	
+	margin:0;
+}
+
+#nav p.account {
+	float:left;
+	width:380px;
+	margin-top:-4px;
+}
+
+#nav p.timezone {
+	float:left;
+	width:150px;
+	margin-top: -8px;
+}
+
+#nav:after, form:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+ul.reminders_list {
+	width:530px;
+	margin: 6px auto 0;
+}
+
+ul.reminders_list li {
+
+	clear:both;
+}
+
+span.time {
+	font-size:14px;
+	font-style: italic;
+	color: #928b88;
+}

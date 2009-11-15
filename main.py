@@ -60,7 +60,7 @@ class MainHandler(webapp.RequestHandler):
         user = users.get_current_user()
         if user:
             logout_url = users.create_logout_url("/")
-            reminders = Reminder.all().filter('user =', user)
+            reminders = Reminder.all().filter('user =', user).fetch(1000)
         else:
             login_url = users.create_login_url('/')
         self.response.out.write(template.render('main.html', locals()))

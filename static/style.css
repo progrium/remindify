@@ -195,3 +195,9 @@ span.time {
 	font-style: italic;
 	color: #928b88;
 }
+
+.note {
+    color: #666;
+    text-align: center;
+    font-size: 12px;
+}
